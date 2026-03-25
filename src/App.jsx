@@ -20,12 +20,10 @@ function App() {
     return () => listener.subscription.unsubscribe();
   }, []);
 
-  // 👇 未ログイン → 元のログイン画面
   if (!session) {
     return <Login />;
   }
 
-  // 👇 ログイン済み → 元の会員画面
   return <MemberSite />;
 }
 
